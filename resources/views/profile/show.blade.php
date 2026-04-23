@@ -36,8 +36,14 @@
                     <div style="font-size: 11px; font-weight: 600; color: #94a3b8; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 10px;">Info Akun</div>
 
                     <div style="display: flex; justify-content: space-between; margin-bottom: 10px; font-size: 13px;">
-                        <span style="color: #64748b;">ID Akun</span>
-                        <span style="font-weight: 600; color: #0f172a;">#{{ auth()->user()->id }}</span>
+                        <span style="color: #64748b;">NIM</span>
+                        <span style="font-weight: 600; color: #0f172a;">
+                            @if(auth()->user()->mahasiswa)
+                                {{ auth()->user()->mahasiswa->nim }}
+                            @else
+                                #{{ auth()->user()->id }}
+                            @endif
+                        </span>
                     </div>
                     <div style="display: flex; justify-content: space-between; margin-bottom: 10px; font-size: 13px;">
                         <span style="color: #64748b;">Role</span>

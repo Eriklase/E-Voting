@@ -43,7 +43,7 @@ class KandidatController extends Controller
             'nama_kandidat' => 'required|string|max:255',
             'visi' => 'required|string',
             'misi' => 'required|string',
-            'foto' => 'nullable|image|mimes:jpeg,png,jpg,gif|max:2048',
+            'foto' => 'nullable|image|mimes:jpeg,png,jpg,gif|max:10240',
         ]);
 
         $fotoPath = null;
@@ -81,7 +81,7 @@ class KandidatController extends Controller
             'nama_kandidat' => 'required|string|max:255',
             'visi' => 'required|string',
             'misi' => 'required|string',
-            'foto' => 'nullable|image|mimes:jpeg,png,jpg,gif|max:2048',
+            'foto' => 'nullable|image|mimes:jpeg,png,jpg,gif|max:10240',
         ]);
 
         if ($request->hasFile('foto')) {
@@ -110,5 +110,14 @@ class KandidatController extends Controller
         $kandidat->delete();
 
         return redirect()->route('kandidat.index')->with('success', 'Kandidat berhasil dihapus!');
+    }
+
+    /**
+     * Display the specified kandidat (public view)
+     */
+    public function show($id)
+    {
+        $kandidat = Kandidat::withCount('voting')->findOrFail($id);
+        return view('kandidat.show', compact('kandidat'));
     }
 }

@@ -21,10 +21,7 @@ Route::get('/register', [AuthController::class, 'showRegister'])->name('register
 Route::post('/register', [AuthController::class, 'register'])->name('register.post');
 Route::post('/logout', [AuthController::class, 'logout'])->name('logout');
 
-// Google Auth routes
-use App\Http\Controllers\Auth\GoogleAuthController;
-Route::get('/auth/google', [GoogleAuthController::class, 'redirect'])->name('google.login');
-Route::get('/auth/google/callback', [GoogleAuthController::class, 'callback']);
+// NOTE: Google OAuth login removed. Prefill/login-as handlers also removed.
 // Admin routes
 Route::middleware(['auth', 'is_admin'])->group(function () {
     // Dashboard
@@ -52,6 +49,9 @@ Route::middleware(['auth', 'is_mahasiswa'])->group(function () {
     Route::get('/voting', [VotingController::class, 'index'])->name('voting.index');
     Route::post('/voting', [VotingController::class, 'store'])->name('voting.store');
     Route::get('/voting/hasil', [VotingController::class, 'hasil'])->name('voting.hasil');
+
+    // Kandidat public detail (mahasiswa can view candidate detail)
+    Route::get('/kandidat/{id}/detail', [KandidatController::class, 'show'])->name('kandidat.public.show');
 });
 
 // Public voting results

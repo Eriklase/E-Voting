@@ -557,19 +557,21 @@
 
                 {{-- Photo --}}
                 <div class="candidate-photo">
-                    @if ($kandidat->foto)
-                        <img src="{{ asset('storage/' . $kandidat->foto) }}" alt="{{ $kandidat->nama_kandidat }}">
-                    @else
-                        <div class="candidate-photo-placeholder">
-                            <i class="fas fa-user-tie"></i>
-                            <span>Foto Kandidat</span>
-                        </div>
-                    @endif
+                    <a href="{{ route('kandidat.public.show', $kandidat->id) }}" style="display:block; height:100%; color:inherit; text-decoration:none;">
+                        @if ($kandidat->foto)
+                            <img src="{{ asset('storage/' . $kandidat->foto) }}" alt="{{ $kandidat->nama_kandidat }}">
+                        @else
+                            <div class="candidate-photo-placeholder">
+                                <i class="fas fa-user-tie"></i>
+                                <span>Foto Kandidat</span>
+                            </div>
+                        @endif
+                    </a>
                 </div>
 
                 {{-- Body --}}
                 <div class="candidate-body">
-                    <div class="candidate-name">{{ $kandidat->nama_kandidat }}</div>
+                    <div class="candidate-name"><a href="{{ route('kandidat.public.show', $kandidat->id) }}" style="color:inherit; text-decoration:none;">{{ $kandidat->nama_kandidat }}</a></div>
                     <div class="candidate-divider"></div>
 
                     <div class="candidate-section-label">

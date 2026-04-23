@@ -8,9 +8,7 @@
             <h1>Data Mahasiswa</h1>
             <p>Kelola data mahasiswa yang terdaftar dalam sistem</p>
         </div>
-        <a href="{{ route('mahasiswa.create') }}" class="btn btn-primary">
-            <i class="fas fa-plus"></i> Tambah Mahasiswa
-        </a>
+        {{-- Tambah Mahasiswa button removed per request --}}
     </div>
 
     <div class="card">

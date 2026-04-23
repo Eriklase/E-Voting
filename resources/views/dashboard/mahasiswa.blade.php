@@ -8,31 +8,39 @@
         <p>Selamat datang, {{ auth()->user()->name }}. Berikut informasi pemilihan terkini.</p>
     </div>
 
+@section('css')
+<style>
+    .stat-card { border-radius: 12px; padding: 18px; }
+    .stat-value { font-size: 28px; font-weight: 800; }
+    .stat-label { font-size: 12px; color: #64748b; }
+    .hero-banner { border-radius: 12px; padding: 22px; background: linear-gradient(90deg, #eef2ff, #f8fafc); }
+    .kandidat-progress .progress { height: 10px; border-radius: 999px; background: #f1f5f9; }
+    .kandidat-progress .progress-bar { border-radius: 999px; box-shadow: none; }
+    .card-title { font-weight: 700; }
+</style>
+@endsection
+
     {{-- Info & Status --}}
     <div class="row g-3 mb-4">
         <div class="col-md-8">
             <div class="card h-100">
                 <div class="card-body">
                     <h5 class="card-title">Informasi Pemilihan</h5>
-                    <div style="background: #f8fafc; border-radius: 8px; padding: 20px; margin-bottom: 16px;">
-                        <div style="font-size: 16px; font-weight: 700; color: #0f172a; margin-bottom: 4px;">
-                            Pemilihan Ketua Senat Fakultas {{ date('Y') }}
-                        </div>
-                        <p style="font-size: 13px; color: #64748b; margin: 0;">
-                            Gunakan hak pilih Anda untuk menentukan Ketua Senat yang akan mewakili aspirasi mahasiswa.
-                        </p>
-                    </div>
-                    <div class="row text-center">
-                        <div class="col-6">
-                            <div style="padding: 16px; background: #eff6ff; border-radius: 8px;">
-                                <div style="font-size: 28px; font-weight: 700; color: #2563eb;">{{ $totalKandidat }}</div>
-                                <div style="font-size: 12px; color: #64748b; margin-top: 2px;">Kandidat</div>
+                    <div class="hero-banner mb-3">
+                        <div class="d-flex justify-content-between align-items-center">
+                            <div>
+                                <div style="font-size: 18px; font-weight: 800; color: #0f172a;">Pemilihan Ketua Senat Fakultas {{ date('Y') }}</div>
+                                <p style="font-size: 13px; color: #64748b; margin: 0;">Gunakan hak pilih Anda untuk menentukan Ketua Senat yang akan mewakili aspirasi mahasiswa.</p>
                             </div>
-                        </div>
-                        <div class="col-6">
-                            <div style="padding: 16px; background: #f0fdf4; border-radius: 8px;">
-                                <div style="font-size: 28px; font-weight: 700; color: #16a34a;">{{ $totalSuara }}</div>
-                                <div style="font-size: 12px; color: #64748b; margin-top: 2px;">Suara Masuk</div>
+                            <div class="d-flex gap-3">
+                                <div class="stat-card text-center" style="background:#eef2ff; min-width:140px;">
+                                    <div class="stat-value text-primary">{{ $totalKandidat }}</div>
+                                    <div class="stat-label">Kandidat</div>
+                                </div>
+                                <div class="stat-card text-center" style="background:#ecfdf5; min-width:140px;">
+                                    <div class="stat-value text-success">{{ $totalSuara }}</div>
+                                    <div class="stat-label">Suara Masuk</div>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -40,7 +48,7 @@
             </div>
         </div>
         <div class="col-md-4">
-            <div class="card h-100">
+            <div class="card h-100 shadow-sm">
                 <div class="card-body d-flex flex-column">
                     <h5 class="card-title">Status Anda</h5>
                     <div class="flex-grow-1 d-flex flex-column align-items-center justify-content-center text-center">
@@ -90,8 +98,8 @@
     <div class="card">
         <div class="card-body">
             <h5 class="card-title">Daftar Kandidat</h5>
-            <div class="table-responsive">
-                <table class="table table-hover">
+            <div class="table-responsive kandidat-progress mt-3">
+                <table class="table table-hover align-middle">
                     <thead>
                         <tr>
                             <th>No</th>
@@ -110,15 +118,15 @@
                             @endphp
                             <tr>
                                 <td>{{ $loop->iteration }}</td>
-                                <td style="font-weight: 600;">{{ $kandidat->nama_kandidat }}</td>
+                                <td style="font-weight: 700;">{{ $kandidat->nama_kandidat }}</td>
                                 <td><span class="badge bg-primary">{{ $kandidat->voting_count }}</span></td>
                                 <td>
-                                    <div style="display: flex; align-items: center; gap: 10px;">
-                                        <div class="progress flex-grow-1" style="height: 8px;">
-                                            <div class="progress-bar" role="progressbar"
+                                    <div style="display: flex; align-items: center; gap: 12px;">
+                                        <div class="progress flex-grow-1" style="height: 10px;">
+                                            <div class="progress-bar bg-info" role="progressbar"
                                                 style="width: {{ $persentase }}%;"></div>
                                         </div>
-                                        <span style="font-size: 12px; color: #64748b; min-width: 40px;">{{ $persentase }}%</span>
+                                        <span style="font-size: 12px; color: #64748b; min-width: 48px;">{{ $persentase }}%</span>
                                     </div>
                                 </td>
                             </tr>
