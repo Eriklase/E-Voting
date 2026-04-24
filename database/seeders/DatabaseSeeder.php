@@ -20,27 +20,29 @@ class DatabaseSeeder extends Seeder
                 'role' => 'admin',
             ]
         );
-        for ($i = 1; $i <= 10; $i++) {
+        // Create a sample mahasiswa user for login (credentials below)
+        // Email: mahasiswa1@example.com
+        // Password: password
+        $mahasiswaUser = User::updateOrCreate(
+            ['email' => 'mahasiswa1@example.com'],
+            [
+                'name' => 'Mahasiswa 1',
+                'password' => Hash::make('password'),
+                'role' => 'mahasiswa',
+            ]
+        );
 
-            $user = User::updateOrCreate(
-                ['email' => "mahasiswa{$i}@gmail.com"],
-                [
-                    'name' => "Mahasiswa $i",
-                    'password' => Hash::make('123456'),
-                    'role' => 'mahasiswa',
-                ]
-            );
-
-            Mahasiswa::updateOrCreate(
-                ['nim' => '201111' . str_pad($i, 3, '0', STR_PAD_LEFT)],
-                [
-                    'nama' => "Mahasiswa $i",
-                    'jurusan' => ['Teknik Informatika', 'Sistem Informasi', 'Manajemen Informatika'][array_rand([0,1,2])],
-                    'angkatan' => ['2020', '2021', '2022', '2023'][array_rand([0,1,2,3])],
-                    'user_id' => $user->id,
-                ]
-            );
-        }
+        Mahasiswa::updateOrCreate(
+            ['nim' => '201111001'],
+            [
+                'nama' => 'Mahasiswa 1',
+                'jurusan' => 'Teknik Informatika',
+                'angkatan' => '2023',
+                'user_id' => $mahasiswaUser->id,
+            ]
+        );
+        // NOTE: Auto-creation of 10 sample mahasiswa users has been removed.
+        // If you need to reseed sample users, re-enable or create a dedicated seeder.
         $kandidats = [
             [
                 'nama_kandidat' => 'Ahmad Rivaldi',

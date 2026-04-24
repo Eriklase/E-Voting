@@ -81,30 +81,32 @@
             <div class="modal fade modal-confirm" id="confirmVoteModalDetail" tabindex="-1" aria-hidden="true">
                 <div class="modal-dialog modal-dialog-centered">
                     <div class="modal-content">
-                        <div class="modal-header">
-                            <h5 class="modal-title"><i class="fas fa-shield-alt"></i> Konfirmasi Pilihan</h5>
+                        <div class="modal-header border-0">
+                            <h5 class="modal-title d-flex align-items-center gap-2"><i class="fas fa-shield-alt text-primary"></i> Konfirmasi Pilihan</h5>
                             <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
                         </div>
                         <div class="modal-body">
-                            <p style="font-size:14px; color:#64748b; margin-bottom:20px;">Anda akan memilih kandidat berikut:</p>
-                            <div class="modal-candidate-preview">
-                                <div class="modal-candidate-avatar" id="modalAvatarInitialDetail">A</div>
-                                <div>
-                                    <div class="modal-candidate-name" id="modalCandidateNameDetail">Nama Kandidat</div>
-                                    <div class="modal-candidate-sub">Kandidat</div>
+                            <div class="d-flex align-items-start gap-3">
+                                <div class="flex-shrink-0">
+                                    <div id="modalAvatarInitialDetail" class="rounded-circle bg-primary d-flex align-items-center justify-content-center text-white" style="width:64px;height:64px;font-size:28px;"></div>
+                                </div>
+                                <div class="flex-grow-1">
+                                    <div class="h6 mb-1" id="modalCandidateNameDetail">Nama Kandidat</div>
+                                    <div class="text-muted small mb-2">Kandidat</div>
+                                    <p class="mb-0 text-truncate" style="color:#475569;">Anda akan memilih kandidat ini. Pastikan pilihan Anda sudah tepat karena tidak dapat diubah setelah dikonfirmasi.</p>
                                 </div>
                             </div>
-                            <div class="modal-warning">
-                                <i class="fas fa-exclamation-triangle"></i>
-                                <span>Pilihan <strong>tidak dapat diubah</strong> setelah dikonfirmasi. Pastikan Anda sudah memilih dengan tepat.</span>
+                            <div class="alert alert-warning d-flex align-items-start gap-2 mt-3" role="alert">
+                                <i class="fas fa-exclamation-triangle mt-1"></i>
+                                <div><strong>Perhatian:</strong> Pilihan <strong>tidak dapat diubah</strong> setelah dikonfirmasi.</div>
                             </div>
                         </div>
-                        <div class="modal-footer">
-                            <button type="button" class="btn-cancel-vote btn btn-outline-secondary" data-bs-dismiss="modal">Batal</button>
-                            <form id="voteFormDetail" method="POST" action="{{ route('voting.store') }}" style="flex:1; display:flex;">
+                        <div class="modal-footer border-0">
+                            <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">Batal</button>
+                            <form id="voteFormDetail" method="POST" action="{{ route('voting.store') }}" style="margin:0;">
                                 @csrf
                                 <input type="hidden" name="kandidat_id" id="voteKandidatIdDetail">
-                                <button type="submit" class="btn btn-primary">Ya, Pilih Sekarang!</button>
+                                <button type="submit" class="btn btn-primary"><i class="fas fa-check-circle me-1"></i> Ya, Pilih Sekarang</button>
                             </form>
                         </div>
                     </div>

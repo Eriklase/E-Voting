@@ -58,17 +58,21 @@
                         </tr>
                     </thead>
                     <tbody>
-                        @php $totalVoting = $kandidats->sum('voting_count'); @endphp
+                        @php
+                            $totalVoting = $kandidats->sum('voting_count');
+                            $maxVotes = $kandidats->max('voting_count');
+                        @endphp
                         @foreach ($kandidats as $kandidat)
                             @php
                                 $persentase = $totalVoting > 0
                                     ? round(($kandidat->voting_count / $totalVoting) * 100, 1)
                                     : 0;
+                                $isTop = ($maxVotes > 0 && $kandidat->voting_count == $maxVotes);
                             @endphp
-                            <tr @if($loop->iteration == 1) style="background: #fffbeb;" @endif>
+                            <tr @if($isTop) style="background: #fffbeb;" @endif>
                                 <td>{{ $loop->iteration }}</td>
                                 <td>
-                                    @if ($loop->iteration == 1)
+                                    @if ($isTop)
                                         <span style="font-weight: 700; color: #0f172a;">
                                             <i class="fas fa-crown" style="color: #f59e0b; margin-right: 6px;"></i>
                                             {{ $kandidat->nama_kandidat }}
@@ -84,7 +88,7 @@
                                 </td>
                                 <td style="font-weight: 600;">{{ $persentase }}%</td>
                                 <td>
-                                    @if ($loop->iteration == 1)
+                                    @if ($isTop)
                                         <span style="background: #fef3c7; color: #92400e; font-size: 12px; font-weight: 600; padding: 3px 10px; border-radius: 5px;">🥇 Pertama</span>
                                     @elseif ($loop->iteration == 2)
                                         <span style="background: #f1f5f9; color: #475569; font-size: 12px; font-weight: 600; padding: 3px 10px; border-radius: 5px;">🥈 Kedua</span>

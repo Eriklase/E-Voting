@@ -263,13 +263,16 @@
                     </tr>
                 </thead>
                 <tbody>
-                    @php $totalVoting = $kandidats->sum('voting_count'); @endphp
+                    @php
+                        $totalVoting = $kandidats->sum('voting_count');
+                        $maxVotes = $kandidats->max('voting_count');
+                    @endphp
                     @foreach ($kandidats as $kandidat)
                         @php
                             $persentase = $totalVoting > 0
                                 ? round(($kandidat->voting_count / $totalVoting) * 100, 1)
                                 : 0;
-                            $isWinner = ($loop->iteration == 1 && $totalVoting > 0);
+                            $isWinner = ($maxVotes > 0 && $kandidat->voting_count == $maxVotes);
                         @endphp
                         <tr class="{{ $isWinner ? 'winner-row' : '' }}">
                             <td class="text-center" style="color: #64748b; font-weight: 600;">{{ $loop->iteration }}</td>
