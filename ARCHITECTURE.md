@@ -1,4 +1,4 @@
-# 🏗️ ARSITEKTUR SISTEM - Sistem Voting Ketua Senat Fakultas
+# 🏗️ ARSITEKTUR SISTEM - E-Voting
 
 Dokumentasi lengkap mengenai arsitektur dan design pattern dari aplikasi.
 
@@ -6,7 +6,7 @@ Dokumentasi lengkap mengenai arsitektur dan design pattern dari aplikasi.
 
 ## 🎯 OVERVIEW
 
-Sistem Voting Ketua Senat Fakultas dibangun menggunakan **Laravel MVC Architecture** dengan design patterns:
+E-Voting dibangun menggunakan **Laravel MVC Architecture** dengan design patterns:
 - **MVC Pattern** (Model-View-Controller)
 - **Repository Pattern** (implicit through controllers)
 - **Middleware Pattern** (for authorization)

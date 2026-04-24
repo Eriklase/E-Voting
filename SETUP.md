@@ -246,7 +246,7 @@ Jika ada error, cek:
 
 Sistem voting Anda sudah siap digunakan! 
 
-🎉 Selamat menggunakan Sistem Voting Ketua Senat Fakultas!
+🎉 Selamat menggunakan E-Voting!
 
 ---
 

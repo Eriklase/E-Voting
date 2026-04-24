@@ -1,4 +1,4 @@
-# 📋 FITUR CHECKLIST - Sistem Voting Ketua Senat Fakultas
+# 📋 FITUR CHECKLIST - E-Voting
 
 Checklist lengkap dari semua fitur yang telah diimplementasikan:
 

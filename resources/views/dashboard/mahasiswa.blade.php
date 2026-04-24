@@ -29,8 +29,8 @@
                     <div class="hero-banner mb-3">
                         <div class="d-flex justify-content-between align-items-center">
                             <div>
-                                <div style="font-size: 18px; font-weight: 800; color: #0f172a;">Pemilihan Ketua Senat Fakultas {{ date('Y') }}</div>
-                                <p style="font-size: 13px; color: #64748b; margin: 0;">Gunakan hak pilih Anda untuk menentukan Ketua Senat yang akan mewakili aspirasi mahasiswa.</p>
+                                <div style="font-size: 18px; font-weight: 800; color: #0f172a;">E-Voting {{ date('Y') }}</div>
+                                <p style="font-size: 13px; color: #64748b; margin: 0;">Gunakan hak pilih Anda untuk menentukan perwakilan yang akan mewakili aspirasi mahasiswa.</p>
                             </div>
                             <div class="d-flex gap-3">
                                 <div class="stat-card text-center" style="background:#eef2ff; min-width:140px;">

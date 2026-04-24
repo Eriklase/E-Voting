@@ -1,6 +1,6 @@
-# Sistem Voting Ketua Senat Fakultas
+# E-Voting
 
-Aplikasi web untuk pemilihan Ketua Senat Fakultas secara online dengan sistem satu mahasiswa satu suara.
+Aplikasi web untuk pemilihan secara online dengan sistem satu mahasiswa satu suara.
 
 ## 📋 Daftar Isi
 1. [Persyaratan Sistem](#persyaratan-sistem)

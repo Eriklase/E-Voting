@@ -13,7 +13,7 @@
                         style="width: 40px; height: 40px; background: #3b82f6; border-radius: 10px; display: flex; align-items: center; justify-content: center;">
                         <i class="fas fa-vote-yea" style="font-size: 18px;"></i>
                     </div>
-                    <span style="font-size: 18px; font-weight: 700;">E-Voting Senat</span>
+                    <span style="font-size: 18px; font-weight: 700;">evoting</span>
                 </div>
 
                 <h1 style="font-size: 32px; font-weight: 700; line-height: 1.3; margin-bottom: 16px;">
@@ -61,7 +61,7 @@
                             style="width: 36px; height: 36px; background: #3b82f6; border-radius: 8px; display: flex; align-items: center; justify-content: center; color: #fff;">
                             <i class="fas fa-vote-yea"></i>
                         </div>
-                        <span style="font-weight: 700; font-size: 16px; color: #1e293b;">E-Voting Senat</span>
+                        <span style="font-weight: 700; font-size: 16px; color: #1e293b;">evoting</span>
                     </div>
                 </div>
 

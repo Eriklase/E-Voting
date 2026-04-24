@@ -13,14 +13,14 @@
                         style="width: 40px; height: 40px; background: #3b82f6; border-radius: 10px; display: flex; align-items: center; justify-content: center;">
                         <i class="fas fa-vote-yea" style="font-size: 18px;"></i>
                     </div>
-                    <span style="font-size: 18px; font-weight: 700;">E-Voting Senat</span>
+                    <span style="font-size: 18px; font-weight: 700;">evoting</span>
                 </div>
 
                 <h2 style="font-size: 26px; font-weight: 700; line-height: 1.3; margin-bottom: 14px;">
                     Buat Akun Baru
                 </h2>
                 <p style="color: rgba(255,255,255,0.5); font-size: 14px; line-height: 1.7;">
-                    Daftarkan diri Anda untuk berpartisipasi dalam pemilihan Ketua Senat Fakultas.
+                    Daftarkan diri Anda untuk berpartisipasi dalam pemilihan.
                 </p>
 
                 <div style="margin-top: 40px;">
@@ -64,7 +64,7 @@
                             style="width: 36px; height: 36px; background: #3b82f6; border-radius: 8px; display: flex; align-items: center; justify-content: center; color: #fff;">
                             <i class="fas fa-vote-yea"></i>
                         </div>
-                        <span style="font-weight: 700; font-size: 16px; color: #1e293b;">E-Voting Senat</span>
+                        <span style="font-weight: 700; font-size: 16px; color: #1e293b;">evoting</span>
                     </div>
                 </div>
 

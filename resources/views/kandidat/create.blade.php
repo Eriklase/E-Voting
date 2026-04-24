@@ -5,7 +5,7 @@
 @section('content')
     <div class="page-header">
         <h1>Tambah Kandidat</h1>
-        <p>Isi data kandidat pemilihan Ketua Senat di bawah ini</p>
+        <p>Isi data kandidat pemilihan di bawah ini</p>
     </div>
 
     <div class="row">

@@ -6,7 +6,7 @@
     <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 24px; flex-wrap: wrap; gap: 12px;">
         <div class="page-header" style="margin-bottom: 0;">
             <h1>Laporan & Rekap Voting</h1>
-            <p>Ringkasan hasil pemilihan Ketua Senat Fakultas</p>
+            <p>Ringkasan hasil pemilihan</p>
         </div>
         <div style="display: flex; gap: 8px;">
             <a href="{{ route('laporan.export') }}" class="btn btn-primary">

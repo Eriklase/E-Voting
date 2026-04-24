@@ -91,7 +91,7 @@
                                 <div class="modal-candidate-avatar" id="modalAvatarInitialDetail">A</div>
                                 <div>
                                     <div class="modal-candidate-name" id="modalCandidateNameDetail">Nama Kandidat</div>
-                                    <div class="modal-candidate-sub">Kandidat Ketua Senat Fakultas</div>
+                                    <div class="modal-candidate-sub">Kandidat</div>
                                 </div>
                             </div>
                             <div class="modal-warning">

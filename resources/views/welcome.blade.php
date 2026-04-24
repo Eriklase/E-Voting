@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>E-Voting Senat Fakultas</title>
+    <title>E-Voting</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -336,7 +336,7 @@
     <nav>
         <a href="/" class="nav-logo">
             <div class="logo-icon"><i class="fas fa-vote-yea"></i></div>
-            <span>E-Voting Senat</span>
+            <span>E-Voting</span>
         </a>
         <div class="nav-links">
             @auth
@@ -361,7 +361,7 @@
             </div>
             <h1>
                 Sistem Voting<br>
-                <span class="highlight">Ketua Senat Fakultas</span>
+                <span class="highlight">E-Voting</span>
             </h1>
             <p>
                 Platform pemilihan digital yang aman dan transparan. Gunakan hak suara Anda kapan saja,
@@ -511,7 +511,7 @@
     {{-- Footer --}}
     <footer>
         <div class="container">
-            &copy; {{ date('Y') }} E-Voting Senat Fakultas. Semua hak dilindungi.
+            &copy; {{ date('Y') }} E-Voting. Semua hak dilindungi.
         </div>
     </footer>
 

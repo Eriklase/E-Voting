@@ -1,4 +1,4 @@
-# 🚀 QUICK START - Sistem Voting Ketua Senat Fakultas
+# 🚀 QUICK START - E-Voting
 
 Panduan singkat untuk menjalankan aplikasi dalam 5 menit!
 

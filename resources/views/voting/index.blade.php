@@ -512,7 +512,7 @@
 <div class="voting-hero">
     <div class="voting-hero-text">
         <h1>🗳️ Pilih Kandidatmu</h1>
-        <p>Pemilihan Ketua Senat Fakultas — Berikan suaramu untuk masa depan yang lebih baik. Setiap suara sangat berarti.</p>
+        <p>Pemilihan — Berikan suaramu untuk masa depan yang lebih baik. Setiap suara sangat berarti.</p>
         <div class="voting-hero-badge">
             <span class="dot"></span>
             Pemilihan Sedang Berlangsung
@@ -624,7 +624,7 @@
                     <div class="modal-candidate-avatar" id="modalAvatarInitial">A</div>
                     <div>
                         <div class="modal-candidate-name" id="modalCandidateName">Nama Kandidat</div>
-                        <div class="modal-candidate-sub">Kandidat Ketua Senat Fakultas</div>
+                        <div class="modal-candidate-sub">Kandidat</div>
                     </div>
                 </div>
 

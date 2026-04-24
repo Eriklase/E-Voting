@@ -6,7 +6,7 @@
     <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 24px; flex-wrap: wrap; gap: 12px;">
         <div class="page-header" style="margin-bottom: 0;">
             <h1>Data Kandidat</h1>
-            <p>Kelola data kandidat pemilihan Ketua Senat</p>
+            <p>Kelola data kandidat pemilihan</p>
         </div>
         <a href="{{ route('kandidat.create') }}" class="btn btn-primary">
             <i class="fas fa-plus"></i> Tambah Kandidat
